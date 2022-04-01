@@ -1,0 +1,18 @@
+;(executable
+; (name png_to_graphics)
+; (public_name png-to-graphics)
+; (libraries imagelib.unix)
+; (modules png_to_graphics))
+; 
+;(rule
+; (target data.ml)
+; (deps png_to_graphics)
+; (action
+;  (run %{deps} ./colour-logo.png)))
+
+(executable
+ (name splash)
+ (public_name ocaml-splash)
+ (libraries graphics unix)
+ (modules splash data))
+ 
